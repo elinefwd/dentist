@@ -2,8 +2,15 @@ import React from 'react';
 import Header from '../../components/header/Header';
 import gaatjes from '../../assets/dentist.svg';
 import './Cavities.css';
+import { useNavigate } from 'react-router-dom';
 
 function Cavities() {
+    const navigate = useNavigate();
+    function handleClick() {
+        console.log ('we gaan direct door naar de afspraken pagina');
+        navigate('/afspraken');
+    }
+
   return (
     <main className="page-container">
       <Header icon={gaatjes} title="Gaatjes" />
